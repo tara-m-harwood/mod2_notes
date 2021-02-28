@@ -4,6 +4,11 @@
 * In terminal: `rails new <project_name> --api`
 * `cd <project_name>`
 
+## Uncomment CORS code
+* In `config/initializers.rb` go to `cors.rb` and uncomment the method there
+* In `Gemfile` uncomment the line: `gem 'rack-cors'`
+* `bundle install`
+
 ## Generate resources for each Class
 * Think through the ERD / plan fields and relationships
 * For each class: `rails g resource Class field1 field2 field3`
@@ -59,12 +64,6 @@
   * `render json:` @ variable
 * test all of these out with Postman
 
-## Uncomment CORS code
-* I have no idea what this does, but it makes my rails app work!
-* In `config/initializers.rb` go to `cors.rb` and uncomment the method there
-* In `Gemfile` uncomment the line: `gem 'rack-cors'`
-* `bundle install`
-
 ## Create the frontend file structure
 * From the terminal, `take frontend`
 * `touch index.html index.js styles.css`
@@ -79,30 +78,32 @@
 ## Write the starter JS
 * Open index.js
 * **select the enclosing container**
-  * set a constant $ variable to the value of `document.querySelector('add-selector-here')`
+  * set a constant $ variable to the value of `document.querySelector('add-selector-here')` to select the container we built in the HTML
 * **fetch the data**
 * take a look at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 * start with the first two lines of the top example - the `fetch` and the first `.then`
 * but within our second `.then`, we will create the code to iterate over the collection and manipulate the DOM
-* `.then(models => { models.forEach(model = {`
-  * **create a new HTML container element and inner elements for each item**
+* `.then(models => { models.forEach(model => {`
+  * **create a new HTML container element
   * for each item in our collection, we are going to make an HTML container with some HTML elements
-  * set a constant $ variable to `document.createElement('element')` -- element will likely be a div
-  * directly on that variable, set a className property = `".my-class-name"`
+  * set a $ constant to `document.createElement('element')` -- element will likely be a div
+  * directly on that constant, set a className property to = `"my-class-name"` -- note syntax here uses **=** sign, not parens
   * **create new HTML elements that we want to display for each item
-  * const `$someClassAttribute = document.createElement('element')` -- elements can be headers, images, anything
+  * set $ constants to `document.createElement('element')` -- elements can be headers, images, anything
   * ^^ repeat as needed
   * **manipulate the elements**
-  * on each variable created above, call `.textContext = model.attribute` or set to anything, like [string interpolation](https://dmitripavlutin.com/string-interpolation-in-javascript/)
+  * on each $ item constant created above, call something like `.innerText = model.attribute` (as one example)
+  * other manipulations are possible here, like [string interpolation](https://dmitripavlutin.com/string-interpolation-in-javascript/)
+  * ^^ string interpolations must be enclosed in backticks
   * for an image use `.src`, and assign to the image path
   * **attach to the dom**
-  * on the *new* container, call `.append($var1, $var2, $var3)
+  * on the *new* item container, call `.append($var1, $var2, $var3)
   * on the *enclosing container* call `.append($newContainer)`
+  * be sure to add all the closing puncuations, likely nested 4 deep
  
 ## Run the app!
 * In terminal, run `rails s` to start the rails server
-* In a different terminal window, run `lite-serber` to run the webserver
+* In a different terminal window, run `lite-server` to run the webserver
+* Note: Be sure you are in the correct folder when launching the servers
+  * if lite-server gives us problems, see https://www.npmjs.com/package/lite-server
 * Open in a browser to watch the magic happen!
-
-       
-
