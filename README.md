@@ -87,13 +87,13 @@
 * `.then(models => { models.forEach(model = {`
   * **create a new HTML container element and inner elements for each item**
   * for each item in our collection, we are going to make an HTML container with some HTML elements
-  * set a constant $ variable to document.createElement('element') -- element will likely be a div
-  * directly on that variable, set a className property = "my-class-name"
+  * set a constant $ variable to `document.createElement('element')` -- element will likely be a div
+  * directly on that variable, set a className property = `".my-class-name"`
   * **create new HTML elements that we want to display for each item
-  * const $someClassAttribute = document.createElement('element') -- elements can be headers, images, anything
+  * const `$someClassAttribute = document.createElement('element')` -- elements can be headers, images, anything
   * ^^ repeat as needed
   * **manipulate the elements**
-  * on each variable created above, call `.textContext = model.attribute`
+  * on each variable created above, call `.textContext = model.attribute` or set to anything, like [string interpolation](https://dmitripavlutin.com/string-interpolation-in-javascript/)
   * for an image use `.src`, and assign to the image path
   * **attach to the dom**
   * on the *new* container, call `.append($var1, $var2, $var3)
