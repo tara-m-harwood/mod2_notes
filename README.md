@@ -99,7 +99,10 @@
   * on the *new* container, call `.append($var1, $var2, $var3)
   * on the *enclosing container* call `.append($newContainer)`
  
-
+## Run the app!
+* In terminal, run `rails s` to start the rails server
+* In a different terminal window, run `lite-serber` to run the webserver
+* Open in a browser to watch the magic happen!
 
        
 
