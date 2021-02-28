@@ -85,7 +85,7 @@
 * start with the first two lines of the top example - the `fetch` and the first `.then`
 * but within our second `.then`, we will create the code to iterate over the collection and manipulate the DOM
 * `.then(models => { models.forEach(model = {`
-  * **create a new HTML container element**
+  * **create a new HTML container element and inner elements for each item**
   * for each item in our collection, we are going to make an HTML container with some HTML elements
   * set a constant $ variable to document.createElement('element') -- element will likely be a div
   * directly on that variable, set a className property = "my-class-name"
