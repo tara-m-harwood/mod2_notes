@@ -3,7 +3,6 @@
 ## Create a new Rails API project
 * In terminal: `rails new <project_name> --api`
 * `cd <project_name>`
-* `bundle install`
 
 ## Generate resources for each Class
 * Think through the ERD / plan fields and relationships
@@ -64,6 +63,7 @@
 * I have no idea what this does, but it makes my rails app work!
 * In `config/initializers.rb` go to `cors.rb` and uncomment the method there
 * In `Gemfile` uncomment the line: `gem 'rack-cors'`
+* `bundle install`
 
 ## Create the frontend file structure
 * From the terminal, `take frontend`
