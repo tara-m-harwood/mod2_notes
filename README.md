@@ -11,6 +11,7 @@
 ## Create a new Rails API project
 * In terminal: `rails new <project_name> **--api**`
 * `cd <project_name>`
+* create a repo, add and commit
 
 ## Uncomment CORS code
 * In `config/initializers.rb` go to `cors.rb` and uncomment the method there
@@ -113,6 +114,6 @@
 ## Run the app!
 * In terminal, run `rails s` to start the rails server
 * In a different terminal window, run `lite-server` to run the webserver
-* Note: Be sure you are in the correct folder when launching the servers
+* **Note: Be sure you are in the correct folder when launching the servers**
   * if lite-server gives us problems, see https://www.npmjs.com/package/lite-server
 * Open in a browser to watch the magic happen!
