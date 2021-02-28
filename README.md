@@ -1,7 +1,15 @@
 # Tara's codeless notes for the Mod2 coding challenge
 
+## Before starting the timer
+* Make sure you are well-rested, well-nourished, and comfortable
+* Read the README all the way through
+* Plan out your app on paper or whiteboard
+  * What models/tables and attributes/fields do we need?
+  * What relationships will we need to create?
+  * What methods will we need?  Which Classes will those methods be called on? 
+
 ## Create a new Rails API project
-* In terminal: `rails new <project_name> --api`
+* In terminal: `rails new <project_name> **--api**`
 * `cd <project_name>`
 
 ## Uncomment CORS code
@@ -18,7 +26,7 @@
   * complete migration file for each table in `db\migrate`
   * blank controller for each class in `app\controllers`
   * model for each class in `app\models` -- may need editing, based on relationships
-  * all of the routes, which can be verified by running `rails routes` (scroll up to top)
+  * all of the routes, which can be verified by running `rails routes` and scrolling to the top
 
 ## Migrate database
 * check each of the migration files in `db\migrate`; edit if desired
@@ -29,7 +37,7 @@
 ## Complete setup of relationships between models 
 * if the tables have relationships, they need to be configured in the models in `app\models`
 * For a 1:M relationship, the 'M' table should already have a line of: `belongs_to :1_table`
-* But for the '1' table we need to manually add `belongs_to :venue`
+* But for the '1' table we need to manually add `belongs_to :M_table`
 
 ## Seed the database
 * Open `db\seeds.rb`
@@ -52,7 +60,7 @@
   * `render json:` @ variable
   *  for included relationship, add `, include: [:models]`
 * **create**
-  * set an @ variable to the method 'Class.create(field1: params[:field1], field2: params[:field2])
+  * set an @ variable to the method `Class.create(field1: params[:field1], field2: params[:field2])`
   * `render json:` @ variable
 * **update**
   * set an @ variable to the method `Class.find_by(id: params[:id])`
@@ -62,11 +70,12 @@
   * set an @ variable to the method `Class.find_by(id: params[:id])`
   * directly on that variable, call `.destroy`
   * `render json:` @ variable
-* test all of these out with Postman
+* test all of the routes out with Postman
 
 ## Create the frontend file structure
 * From the terminal, `take frontend`
 * `touch index.html index.js styles.css`
+* note: remember you will need to be in this folder when you run lite-server
 
 ## Write the starter HTML
 * Open index.html
@@ -94,10 +103,10 @@
   * **manipulate the elements**
   * on each $ item constant created above, call something like `.innerText = model.attribute` (as one example)
   * other manipulations are possible here, like [string interpolation](https://dmitripavlutin.com/string-interpolation-in-javascript/)
-  * ^^ string interpolations must be enclosed in backticks
+  * ^^ note that string interpolations must be enclosed in backticks
   * for an image use `.src`, and assign to the image path
   * **attach to the dom**
-  * on the *new* item container, call `.append($var1, $var2, $var3)
+  * on the *new item container*, call `.append($var1, $var2, $var3)
   * on the *enclosing container* call `.append($newContainer)`
   * be sure to add all the closing puncuations, likely nested 4 deep
  
