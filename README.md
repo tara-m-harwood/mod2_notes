@@ -34,7 +34,7 @@
 * Run `rails db: seed` in terminal
 * To check that seeds have been saved to db, run `rails c` then `Model.all`
 
-## Create the controllers
+## Write the controller methods
 * Edit the controller files for each model in `app\controllers`
 * Define 5 methods: index, show, create, update, and destroy
 * **index** 
@@ -69,14 +69,14 @@
 * From the terminal, `take frontend`
 * `touch index.html index.js styles.css`
 
-## Build the starter HTML
+## Write the starter HTML
 * Open index.html
 * Type an `!`, then trigger the Emmet abbreviation
 * In the head, change the title
 * Just above the title, add a `<script></script>` tag with the `src` set to index.js.  Add the word `defer` to the opening tag.
 * In the body, create some kind of container element that we can append to later
 
-## Build the starter JS
+## Write the starter JS
 * Open index.js
 * **select the enclosing container**
   * set a constant $ variable to the value of `document.querySelector('add-selector-here')`
