@@ -65,7 +65,40 @@
 * In `config/initializers.rb` go to `cors.rb` and uncomment the method there
 * In `Gemfile` uncomment the line: `gem 'rack-cors'`
 
+## Create the frontend file structure
+* From the terminal, `take frontend`
+* `touch index.html index.js styles.css`
 
+## Build the starter HTML
+* Open index.html
+* Type an `!`, then trigger the Emmet abbreviation
+* In the head, change the title
+* Just above the title, add a `<script></script>` tag with the `src` set to index.js.  Add the word `defer` to the opening tag.
+* In the body, create some kind of container element that we can append to later
+
+## Build the starter JS
+* Open index.js
+* **select the enclosing container**
+  * set a constant $ variable to the value of `document.querySelector('add-selector-here')`
+* **fetch the data**
+* take a look at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+* start with the first two lines of the top example - the `fetch` and the first `.then`
+* but within our second `.then`, we will create the code to iterate over the collection and manipulate the DOM
+* `.then(models => { models.forEach(model = {`
+  * **create a new HTML container element**
+  * for each item in our collection, we are going to make an HTML container with some HTML elements
+  * set a constant $ variable to document.createElement('element') -- element will likely be a div
+  * directly on that variable, set a className property = "my-class-name"
+  * **create new HTML elements that we want to display for each item
+  * const $someClassAttribute = document.createElement('element') -- elements can be headers, images, anything
+  * ^^ repeat as needed
+  * **manipulate the elements**
+  * on each variable created above, call `.textContext = model.attribute`
+  * for an image use `.src`, and assign to the image path
+  * **attach to the dom**
+  * on the *new* container, call `.append($var1, $var2, $var3)
+  * on the *enclosing container* call `.append($newContainer)`
+ 
 
 
        
