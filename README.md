@@ -15,6 +15,7 @@
 
 ## Uncomment CORS code
 * In `config/initializers.rb` go to `cors.rb` and uncomment the method there
+* change origins to '*'
 * In `Gemfile` uncomment the line: `gem 'rack-cors'`
 * `bundle install`
 
@@ -72,6 +73,7 @@
   * directly on that variable, call `.destroy`
   * `render json:` @ variable
 * test all of the routes out with Postman
+* reference: https://guides.rubyonrails.org/routing.html
 
 ## Create the frontend file structure
 * From the terminal, `take frontend`
