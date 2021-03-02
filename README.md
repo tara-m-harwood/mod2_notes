@@ -87,7 +87,7 @@
 * Just above the title, add a `<script></script>` tag with the `src` set to index.js.  Add the word `defer` to the opening tag.
 * In the body, create some kind of container element that we can append to later
 
-## Write the starter JS
+## Write the JS for an index page
 * Open index.js
 * **select the enclosing container**
   * set a constant $ variable to the value of `document.querySelector('add-selector-here')` to select the container we built in the HTML
@@ -96,11 +96,12 @@
 * start with the first two lines of the top example - the `fetch` and the first `.then`
 * but within our second `.then`, we will create the code to iterate over the collection and manipulate the DOM
 * `.then(models => { models.forEach(model => {`
+* ^^ if you are not looping, it is `.then(model => {`
   * **create a new HTML container element
   * for each item in our collection, we are going to make an HTML container with some HTML elements
   * set a $ constant to `document.createElement('element')` -- element will likely be a div
   * directly on that constant, set a className property to = `"my-class-name"` -- note syntax here uses **=** sign, not parens
-  * **create new HTML elements that we want to display for each item
+  * **create new HTML elements to display for each item
   * set $ constants to `document.createElement('element')` -- elements can be headers, images, anything
   * ^^ repeat as needed
   * **manipulate the elements**
@@ -112,6 +113,15 @@
   * on the *new item container*, call `.append($var1, $var2, $var3)
   * on the *enclosing container* call `.append($newContainer)`
   * be sure to add all the closing puncuations, likely nested 4 deep
+
+## Write the JS for an show page
+* **select the enclosing container**
+  * set a constant $ variable to the value of `document.querySelector('add-selector-here')` to select the container we built in the HTML
+* **pull the param from the URL**
+*  set a constant (such as queryParams) to the window.location.search 
+*  set a constant (such as queryParamsObject) to `new URLSearch(<queryParams, or whatever this was named>)`
+*  set a constant (such as value) to <queryParamsObject, or whatever>.get("<the name of the key in the URL param>
+  **follow all the same instructions for index pages but add your ${value} the fetch URL and cut out the loop** 
  
 ## Run the app!
 * In terminal, run `rails s` to start the rails server
