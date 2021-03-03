@@ -39,7 +39,7 @@
 ## Complete setup of relationships between models 
 * if the tables have relationships, they need to be configured in the models in `app\models`
 * For a 1:M relationship, the 'M' table should already have a line of: `belongs_to :1_table`
-* But for the '1' table we need to manually add `belongs_to :M_table`
+* But for the '1' table we need to manually add `has_many :M_table`
 
 ## Seed the database
 * Open `db\seeds.rb`
