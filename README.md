@@ -73,6 +73,7 @@
   * directly on that variable, call `.destroy`
   * `render json:` @ variable
 * test all of the routes out with Postman
+* to test out the create and update, make sure to use raw JSON, in the {"key":"value","key":"value"} format
 * reference: https://guides.rubyonrails.org/routing.html
 
 ## Create the frontend file structure
