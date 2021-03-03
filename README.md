@@ -120,7 +120,7 @@
   * set a constant $ variable to the value of `document.querySelector('add-selector-here')` to select the container we built in the HTML
 * **pull the param from the URL**
 *  set a constant (such as queryParams) to the window.location.search 
-*  set a constant (such as queryParamsObject) to `new URLSearch(<queryParams, or whatever this was named>)`
+*  set a constant (such as queryParamsObject) to `new URLSearchParams(<queryParams, or whatever this was named>)`
 *  set a constant (such as value) to <queryParamsObject, or whatever>.get("the name of the key in the URL param")
   **follow all the same instructions for index pages but add your ${value} the fetch URL and cut out the loop** 
  
